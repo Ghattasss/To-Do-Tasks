@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    width: calc(100% - 22px);
+    height: 35px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#addbtn {
+    background-color: #f0a500;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #34495e;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn,
+.done-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.done-btn {
+    background-color: green;
+}
+
+.check {
+    text-decoration: line-through;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+p::before {
+    content: "|";
+    color: rgb(62, 20, 50);
+    font-weight: bold;
+    animation-name: text;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes text {
+    0% { content: "D|"; }
+    5% { content: "Do |"; }
+    10% { content: "Do M|"; }
+    20% { content: "Do Mo|"; }
+    30% { content: "Do Mor|"; }
+    40% { content: "Do More|"; }
+    50% { content: "Do More G|"; }
+    60% { content: "Do More Gre|"; }
+    70% { content: "Do More Great|"; }
+    80% { content: "Do More Great W|"; }
+    85% { content: "Do More Great Wo|"; }
+    90% { content: "Do More Great Work|"; }
+    100% { content: "Do More Great Work...|"; }
+}
+
+@media (max-width: 508px) {
+    body {
+        font-size: normal;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
